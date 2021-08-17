@@ -6,10 +6,10 @@
 complete <- function(directory, id = 1:332) {
         classes <- c("Date", "numeric", "numeric", "integer")
         df <- data.frame("id" = NA, "nobs" = NA) 
-        for(i in id) {
-                id_char <- if(i < 10) {
+        for (i in id) {
+                id_char <- if (i < 10) {
                         paste("00", i, sep = "")
-                } else if(i <100) {
+                } else if (i <100) {
                         paste("0", i, sep = "")
                 } else {
                         i
@@ -18,10 +18,10 @@ complete <- function(directory, id = 1:332) {
                                       sep = ",", na.strings = "<NA>", header = TRUE, 
                                       colClasses = classes)
                 good <- complete.cases(id_data)
-                nobs <- nrow(id_data[good,][])
+                nobs <- nrow(id_data[good,])
                 
                 df <- rbind(df, c(i, nobs))
         }
         good <- complete.cases(df)
-        df[good,][]
+        df[good,]
 }

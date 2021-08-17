@@ -6,15 +6,15 @@
 
 corr <- function(directory, threshold = 0) {
         x <- complete("specdata", 1:332)
-        threshold.data <- x$nobs > threshold
-        x <- x[threshold.data,][]
+        threshold_data <- x$nobs > threshold
+        x <- x[threshold_data,][]
         y <- vector("numeric")
         classes <- c("Date", "numeric", "numeric", "integer")
-        ## df <- data.frame("Date" = NA, "sulfate" = NA, "nitrate" = NA, "ID" = NA)
-        for(i in x[["id"]]){
-                id_char <- if(i < 10) {
+
+        for (i in x[["id"]]){
+                id_char <- if (i < 10) {
                         paste("00", i, sep = "")
-                } else if(i <100) {
+                } else if (i <100) {
                         paste("0", i, sep = "")
                 } else {
                         i
