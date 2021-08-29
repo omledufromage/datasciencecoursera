@@ -2,7 +2,7 @@
 ## measurements for each monitor (observe threshold) and creates a vector 
 ## with the results. Only complete cases are observed.
 
-## threshold <- number of minumum observed cases in a monitor.  
+## threshold <- number of minimum observed cases in a monitor.  
 
 corr <- function(directory, threshold = 0) {
         x <- complete("specdata", 1:332)
