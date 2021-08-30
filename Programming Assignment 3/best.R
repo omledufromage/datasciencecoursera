@@ -1,3 +1,7 @@
+# This function takes an argument for a US state (AL, NY, TX, etc...) and one of 
+# 3 possible outcomes (heart attack, heart failure and pneumonia) and reports 
+# which hospital in the state had the lowest mortality rate for that outcome.
+
 best <- function(state, outcome) {
         df <- read.csv("outcome-of-care-measures.csv", 
                        colClasses = "character")

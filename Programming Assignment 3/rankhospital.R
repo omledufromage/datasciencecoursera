@@ -1,3 +1,11 @@
+# This function, like best.R, takes a US state and one of three possible 
+# outcomes (heart attack, heart failure and pneumonia) as arguments, as well as
+# an argument indicating the ranking of the hospital in that state, and returns
+# the name of the hospital ranked in the specified position within the state
+# in terms of mortality for the specified outcome (higher ranking means lower
+# mortality). Ties are settled alphabetically. 
+
+
 rankhospital <- function(state, outcome, num = "best") {
         df <- read.csv("outcome-of-care-measures.csv", 
                        colClasses = "character")

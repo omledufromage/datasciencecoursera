@@ -1,3 +1,8 @@
+# This function, like rankhospital.R, takes one out of three outcomes (heart attack, 
+# heart failure and pneumonia) and the state ranking desired and returns a dataframe 
+# containing the name of the hospital of each state in the specified rank. Ties
+# are resolved alphabetically.  
+
 rankall <- function(outcome, num = "best") {
         source("rankhospital.R")
         
