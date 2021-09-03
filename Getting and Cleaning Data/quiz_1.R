@@ -15,8 +15,13 @@ setwd("~/Desktop/datasciencecoursera/Getting and Cleaning Data")
 
 ## [1] "cameras.csv"
 
+<<<<<<< HEAD
 # dateDownloaded <- date()
 # dateDownloaded
+=======
+dateDownloaded <- date()
+dateDownloaded
+>>>>>>> d1d866e4dc0b036f581887dc6f04e3895e0f5b56
 
 ## [1] "Wed Sep  1 17:59:49 2021"
 
@@ -58,11 +63,17 @@ sum(dat$Zip*dat$Ext, na.rm=TRUE)
 
 #####################################################
 
+<<<<<<< HEAD
 ## Q3 
 
 # Multiple variables in the same column violates the principle of tidy data.
 
 ###########################
+=======
+## Multiple variables in the same column violates the principle of tidy data.
+
+
+>>>>>>> d1d866e4dc0b036f581887dc6f04e3895e0f5b56
 
 ## Q4
 #
@@ -141,4 +152,8 @@ DT[,mean(pwgtp15),by=SEX]
 system.time(DT[,mean(pwgtp15),by=SEX])
 # user  system elapsed 
 # 0.004   0.000   0.002 
+<<<<<<< HEAD
 # THIS ONE IS MARKED AS CORRECT!!!!!!!!!!
+=======
+# THIS ONE IS MARKED AS CORRECT
+>>>>>>> d1d866e4dc0b036f581887dc6f04e3895e0f5b56
