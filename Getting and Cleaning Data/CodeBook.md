@@ -18,5 +18,5 @@ Variables can represent the mean or the standard deviation (std) of different me
 any of the three axis (x, y and z). The prefix (t, f or angle) indicates whether the measurement was of time, frequency or angle.
 
 The units of all the variables remain the same as described in features.txt. (In the case of the tidy2 data set, 
-the units are likewise the same, since the mean doesn't change the units)
+the units are likewise the same, since taking the average of the different measurements doesn't change the unit)
 
