@@ -18,4 +18,6 @@ run_analysis.R does the following to Samsung's data:
 4. Appropriately labels the data set with descriptive variable names. 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-The script assumes the file containing the data has been downloaded and was unzipped in your working directory.
+The script assumes the file containing the data has been downloaded and was unzipped in your working directory. 
+The the two data sets created are called "tidy" (step 4) and "tidy2" (step 5) .
+
