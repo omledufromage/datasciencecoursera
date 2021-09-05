@@ -12,20 +12,34 @@ library(data.table)
 
 ### SET THE WORKING DIRECTORY TO WHERE THE DATA IS (the directory that contains the "UCI HAR Dataset" folder).
 
+<<<<<<< HEAD
 ### Cleaning the variable names (reads from the working directory):
 headers <- read.table("./UCI HAR Dataset/features.txt", col.names = c("V1", "unclean"))
+=======
+### Cleaning the variable names:
+headers <- read.table("./data/UCI HAR Dataset/features.txt", col.names = c("V1", "unclean"))
+>>>>>>> 27436f84eca6f3ee0c821a38c6378a090c869e1d
 headers$clean <- tolower(headers$unclean)
 headers$clean <- gsub("[[:digit:]]", "", headers$clean)
 headers$clean <- gsub("[[:punct:]]", "", headers$clean)
 headers$clean <- make.unique(headers$clean, sep = "")
 
 ### Reading the data:
+<<<<<<< HEAD
 xtest <- read.table("./UCI HAR Dataset/test/X_test.txt", col.names = headers$clean)
 ytest <- read.table("./UCI HAR Dataset/test/y_test.txt", col.names = c("label")) 
 xtrain <-read.table("./UCI HAR Dataset/train/X_train.txt", col.names = headers$clean)
 ytrain <-read.table("./UCI HAR Dataset/train/y_train.txt", col.names = c("label")) 
 subtest <- read.table("./UCI HAR Dataset/test/subject_test.txt", col.names = c("subject"))
 subtrain <- read.table("./UCI HAR Dataset/train/subject_train.txt", col.names = c("subject"))
+=======
+xtest <- read.table("./data/UCI HAR Dataset/test/X_test.txt", col.names = headers$clean)
+ytest <- read.table("./data/UCI HAR Dataset/test/y_test.txt", col.names = c("label")) 
+xtrain <-read.table("./data/UCI HAR Dataset/train/X_train.txt", col.names = headers$clean)
+ytrain <-read.table("./data/UCI HAR Dataset/train/y_train.txt", col.names = c("label")) 
+subtest <- read.table("./data/UCI HAR Dataset/test/subject_test.txt", col.names = c("subject"))
+subtrain <- read.table("./data/UCI HAR Dataset/train/subject_train.txt", col.names = c("subject"))
+>>>>>>> 27436f84eca6f3ee0c821a38c6378a090c869e1d
 
 ### Joining the datasets by rows to unify groups representing the same variables (x, y and subjects): 
 dfx <- rbind(xtest, xtrain)
